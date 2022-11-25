@@ -1,4 +1,4 @@
-package com.dong.ourplayground.config;
+package com.dong.ourplayground.config.auth;
 
 import com.dong.ourplayground.config.auth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
