@@ -1,7 +1,5 @@
 package com.dong.ourplayground.web;
 
-import com.dong.ourplayground.config.auth.LoginUser;
-import com.dong.ourplayground.config.auth.dto.SessionUser;
 import com.dong.ourplayground.domain.chat.ChatRoom;
 import com.dong.ourplayground.domain.chat.ChatRoomRepository;
 import com.dong.ourplayground.web.dto.CreateRoomRequestDTO;
@@ -26,9 +24,7 @@ public class ChatRoomController {
 
     @PostMapping("/room")
     @ResponseBody
-    public ChatRoom createRoom(@RequestParam CreateRoomRequestDTO createRoomRequestDTO, @LoginUser SessionUser user) {
+    public ChatRoom createRoom(@RequestBody CreateRoomRequestDTO createRoomRequestDTO) {
         return chatRoomRepository.save(createRoomRequestDTO.toEntity());
     }
-
-
 }
