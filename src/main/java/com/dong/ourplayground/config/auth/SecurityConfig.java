@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.web.SecurityFilterChain;
 
 @RequiredArgsConstructor
-@EnableWebSecurity
+//@EnableWebSecurity // TODO: 인증 개발 완료되면 활성화
 public class SecurityConfig{
 
     private final CustomOAuth2UserService customOAuth2UserService;
